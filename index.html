@@ -1,10 +1,107 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EKS with IRSA</title>
+    <meta charset="UTF-8">
+    <title>Advantages of IRSA</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1 {
+        color: #0077c2;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        color: #0077c2;
+        font-size: 24px;
+        margin-top: 50px;
+      }
+      ul {
+        list-style-type: disc;
+        margin: 0;
+        padding: 0 0 0 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .comparison-table {
+        margin-top: 50px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .comparison-table th {
+        background-color: #0077c2;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+      }
+      .comparison-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .steps {
+        margin-top: 50px;
+      }
+      .steps h3 {
+        color: #0077c2;
+        font-size: 20px;
+        margin-top: 0;
+      }
+      .steps ol {
+        list-style-type: decimal;
+        margin: 0;
+        padding: 0 0 0 20px;
+      }
+      .steps li {
+        margin-bottom: 10px;
+      }
+      .example {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .example img {
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <h1>Architetcture of EKS with IRSA</h1>
-    <img src="eks-irsa.png" alt="A beautiful image">
-  </body>
-</html>
+    <h1>Advantages of using IRSA</h1>
+    <h2>Improved scalability and flexibility</h2>
+    <ul>
+      <li>Resources can be automatically allocated and adjusted based on demand</li>
+    </ul>
+    <h2>Increased reliability and availability</h2>
+    <ul>
+      <li>Redundancy and fault-tolerance mechanisms ensure that services remain available even in the event of hardware or software failures</li>
+    </ul>
+    <h2>Improved security</h2>
+    <ul>
+      <li>Better security controls and isolation between resources reduce the risk of unauthorized access or data breaches</li>
+    </ul>
+    <h2>Cost savings</h2>
+    <ul>
+      <li>Reduces costs associated with hardware, maintenance, and management</li>
+    </ul>
+    
+    <table class="comparison-table">
+      <tr>
+        <th>Conventional method</th>
+        <th>IRSA</th>
+        <h1>Architetcture of EKS with IRSA</h1>
+        <img src="eks-irsa.png" alt="A beautiful image">
+      </tr>
+      <tr>
+        <td>Requires upfront investment in hardware and software</td>
+        <td>Provides a more cost-effective solution that eliminates the need for upfront investment in hardware and software</td>
+      </tr>
+      <tr>
+        <td>Manual setup and configuration of infrastructure components</td>
+        <td>Infrastructure components can be easily provisioned and managed through a web-based interface or APIs</td>
+      </tr>
+      <tr>
+        <td>Scaling and maintenance can be time-consuming and costly</td>
+        <td>
