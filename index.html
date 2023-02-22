@@ -70,29 +70,21 @@
   </head>
   <body>
     <h1>Advantages of using IRSA</h1>
-    <h2>Improved scalability and flexibility</h2>
-    <ul>
-      <li>Resources can be automatically allocated and adjusted based on demand</li>
-    </ul>
-    <h2>Increased reliability and availability</h2>
-    <ul>
-      <li>Redundancy and fault-tolerance mechanisms ensure that services remain available even in the event of hardware or software failures</li>
-    </ul>
-    <h2>Improved security</h2>
-    <ul>
-      <li>Better security controls and isolation between resources reduce the risk of unauthorized access or data breaches</li>
-    </ul>
-    <h2>Cost savings</h2>
-    <ul>
-      <li>Reduces costs associated with hardware, maintenance, and management</li>
-    </ul>
+    <p>IAM Roles for Service Accounts (IRSA) is a feature of Amazon Elastic Kubernetes Service (EKS) that allows Kubernetes pods to assume IAM roles directly, without the need for an intermediate container or process. This feature provides several advantages over traditional methods of accessing AWS resources from Kubernetes.</p>
+    <h2>Simplified permissions management</h2>
+    <p>One of the key advantages of using IRSA is that it simplifies the process of managing permissions for Kubernetes pods. In traditional methods, such as using IAM user credentials or an EC2 instance role, it can be challenging to restrict access to specific resources or actions. With IRSA, each pod can be associated with its own IAM role, which can be scoped to a specific set of permissions. This allows for more granular control over access to AWS resources, improving security and reducing the risk of unauthorized access.</p>
+    <h2>Secure access to AWS resources</h2>
+    <p>Another advantage of using IRSA is that it allows Kubernetes workloads to access AWS resources without exposing AWS credentials to the pod or container. With traditional methods, such as using IAM user credentials, the credentials must be passed to the pod or container, which can pose a security risk if the credentials are compromised. With IRSA, the pod or container is assigned an IAM role, and the AWS SDK automatically retrieves temporary credentials from the AWS Security Token Service (STS) when needed. This allows for more secure access to AWS resources from Kubernetes workloads.</p>
+    <h2>Seamless integration with AWS services</h2>
+    <p>IRSA also provides a more seamless integration between Kubernetes and AWS services. With traditional methods, it can be challenging to integrate Kubernetes workloads with AWS services that require IAM role-based access. With IRSA, Kubernetes workloads can assume IAM roles directly, allowing for easier integration with AWS services such as Amazon S3, Amazon DynamoDB, and AWS Lambda. This simplifies the process of building and deploying applications on Kubernetes that require access to AWS resources.</p>
+    <h2>Efficient management of IAM roles</h2>
+    <p>Finally, IRSA provides a more scalable and efficient way to manage IAM roles for Kubernetes workloads. With traditional methods, IAM roles must be managed separately for each pod or container, which can be time-consuming and error-prone. With IRSA, IAM roles can be associated with Kubernetes service accounts, allowing for easier management of roles at scale. This simplifies the process of managing permissions for large-scale Kubernetes workloads and reduces the risk of misconfiguration or errors.</p>
+    <p>In conclusion, IAM Roles for Service Accounts (IRSA) provides several advantages over traditional methods of accessing AWS resources from Kubernetes workloads. It simplifies the process of managing permissions, improves security, provides a more seamless integration with AWS services, and allows for more efficient management of IAM roles at scale. As organizations increasingly adopt Kubernetes for their application workloads, IRSA is becoming an essential tool for securing and managing access to AWS resources from Kubernetes.</p>
     
     <table class="comparison-table">
       <tr>
         <th>Conventional method</th>
         <th>IRSA</th>
-        <h1>Architetcture of EKS with IRSA</h1>
-        <img src="eks-irsa.png" alt="A beautiful image">
       </tr>
       <tr>
         <td>Requires upfront investment in hardware and software</td>
