@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Securing Connection from k8s using IRSA</title>
-</head>
-<body>
-	<!-- Embed the PowerPoint presentation using an iframe -->
-	<iframe src="irsa.pptx" width="800" height="600"></iframe>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Advantages of IRSA</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1 {
+        color: #0077c2;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        color: #0077c2;
+        font-size: 24px;
+        margin-top: 50px;
+      }
+      ul {
+        list-style-type: disc;
+        margin: 0;
+        padding: 0 0 0 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .comparison-table {
+        margin-top: 50px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .comparison-table th {
+        background-color: #0077c2;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+      }
+      .comparison-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .steps {
+        margin-top: 50px;
+      }
+      .steps h3 {
+        color: #0077c2;
+        font-size: 20px;
+        margin-top: 0;
+      }
+      .steps ol {
+        list-style-type: decimal;
+        margin: 0;
+        padding: 0 0 0 20px;
+      }
+      .steps li {
+        margin-bottom: 10px;
+      }
+      .example {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .example img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Advantages of using IRSA</h1>
+    <p>IAM Roles for Service Accounts (IRSA) is a feature of Amazon Elastic Kubernetes Service (EKS) that allows Kubernetes pods to assume IAM roles directly, without the need for an intermediate container or process. This feature provides several advantages over traditional methods of accessing AWS resources from Kubernetes.</p>
+    <h2>Simplified permissions management</h2>
+    <p>One of the key advantages of using IRSA is that it simplifies the process of managing permissions for Kubernetes pods. In traditional methods, such as using IAM user credentials or an EC2 instance role, it can be challenging to restrict access to specific resources or actions. With IRSA, each pod can be associated with its own IAM role, which can be scoped to a specific set of permissions. This allows for more granular control over access to AWS resources, improving security and reducing the risk of unauthorized access.</p>
+    <h2>Secure access to AWS resources</h2>
+    <p>Another advantage of using IRSA is that it allows Kubernetes workloads to access AWS resources without exposing AWS credentials to the pod or container. With traditional methods, such as using IAM user credentials, the credentials must be passed to the pod or container, which can pose a security risk if the credentials are compromised. With IRSA, the pod or container is assigned an IAM role, and the AWS SDK automatically retrieves temporary credentials from the AWS Security Token Service (STS) when needed. This allows for more secure access to AWS resources from Kubernetes workloads.</p>
+    <h2>Seamless integration with AWS services</h2>
+    <p>IRSA also provides a more seamless integration between Kubernetes and AWS services. With traditional methods, it can be challenging to integrate Kubernetes workloads with AWS services that require IAM role-based access. With IRSA, Kubernetes workloads can assume IAM roles directly, allowing for easier integration with AWS services such as Amazon S3, Amazon DynamoDB, and AWS Lambda. This simplifies the process of building and deploying applications on Kubernetes that require access to AWS resources.</p>
+    <h2>Efficient management of IAM roles</h2>
+    <p>Finally, IRSA provides a more scalable and efficient way to manage IAM roles for Kubernetes workloads. With traditional methods, IAM roles must be managed separately for each pod or container, which can be time-consuming and error-prone. With IRSA, IAM roles can be associated with Kubernetes service accounts, allowing for easier management of roles at scale. This simplifies the process of managing permissions for large-scale Kubernetes workloads and reduces the risk of misconfiguration or errors.</p>
+    <p>In conclusion, IAM Roles for Service Accounts (IRSA) provides several advantages over traditional methods of accessing AWS resources from Kubernetes workloads. It simplifies the process of managing permissions, improves security, provides a more seamless integration with AWS services, and allows for more efficient management of IAM roles at scale. As organizations increasingly adopt Kubernetes for their application workloads, IRSA is becoming an essential tool for securing and managing access to AWS resources from Kubernetes.</p>
+    <table class="comparison-table">
+      <tr>
+        <th>Conventional method</th>
+        <th>IRSA</th>
+      </tr>
+      <tr>
+        <td>Requires upfront investment in hardware and software</td>
+        <td>Provides a more cost-effective solution that eliminates the need for upfront investment in hardware and software</td>
+      </tr>
+      <tr>
+        <td>Manual setup and configuration of infrastructure components</td>
+        <td>Infrastructure components can be easily provisioned and managed through a web-based interface or APIs</td>
+      </tr>
+      <tr>
+        <td>Scaling and maintenance can be time-consuming and costly</td>
+        <td>
