@@ -5,4 +5,4 @@ metadata:
   name: app
   namespace: default
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::424432388155:role/S3TestAccessRole
+    eks.amazonaws.com/role-arn: arn:aws:iam::199730753216:role/ajlawless-demo-bucket-role
