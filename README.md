@@ -1,0 +1,1 @@
+# IAM Roles for Service Accounts & Pods: (IRSA EKS | IAM OIDC Provider | AWS EKS | Kubernetes)
